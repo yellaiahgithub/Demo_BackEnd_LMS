@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: food-deploymentss
+  name: food-deploy
   labels:
     tier: backend
 spec:
@@ -25,7 +25,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: food-servicess
+  name: food-servic
 spec:
   type: LoadBalancer
   ports:
