@@ -19,7 +19,7 @@ WORKDIR /app
 RUN npm install
 
 #expose a port to allow external access
-EXPOSE 3000
+EXPOSE 3002
 
 # Start mean application
 CMD ["npm", "run", "dev"]
