@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: food-deployment
+  name: food-deployments
   labels:
     tier: backend
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       tier: backend
@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
       - name: food
-        image: yellaiahdocker/food
+        image: yellaiahdocker/backend
         ports:
-        - containerPort: 80
+        - containerPort: 3002
 ---
 
 
@@ -31,6 +31,6 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 80
+      targetPort: 3002
   selector: 
       tier: backend
