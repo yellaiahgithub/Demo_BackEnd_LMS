@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: food-deplo
+  name: food-dep
   labels:
     tier: backend
 spec:
@@ -25,12 +25,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: food-servi
+  name: food-serv
 spec:
   type: LoadBalancer
   ports:
     - protocol: TCP
-      port: 80
+      port: 90
       targetPort: 3002
   selector: 
       tier: backend
